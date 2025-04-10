@@ -10,16 +10,19 @@ import { Dialog, DialogTrigger, DialogContent, DialogTitle } from "@/components/
 
 export function Hero() {
     return (
-        <section className="flex flex-col items-center justify-center py-24 px-6 text-white text-center bg-gradient-to-b from-black via-neutral-900 to-black">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight tracking-tight">
-                Hi, I’m <span className="text-indigo-500">Tanmoy</span>
-            </h1>
-            <h2 className="text-xl md:text-3xl font-medium text-neutral-300 mb-6">
-                A computer engineer and systems researcher focused on intelligent systems, algorithms, and real-world problem solving.
-            </h2>
-            <p className="text-base md:text-xl text-neutral-400 max-w-2xl mb-10">
-                Passionate about pushing the boundaries of technology through research in artificial intelligence, software architecture, and computational theory.
-            </p>
+        <section className="flex flex-col items-center justify-center py-24 px-6 text-white text-center ">
+            <div className="md:gap-4 flex flex-col items-center mb-10">
+                <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight tracking-tight">
+                    Hi, I’m <span className="text-indigo-500">Tanmoy</span>
+                </h1>
+                <h2 className="text-xl md:text-3xl font-medium text-neutral-300 mb-6 max-w-5xl">
+                    A computer engineer and systems researcher focused on intelligent systems, algorithms, and real-world problem solving.
+                </h2>
+                <p className="text-base md:text-xl text-neutral-400 max-w-6xl md:max-w-6xl lg:max-w-6xl xl:max-w-5xl mb-10">
+
+                    Passionate about pushing the boundaries of technology through research in artificial intelligence, software architecture, and computational theory.
+                </p>
+           </div>
             <div className="flex flex-wrap gap-4 justify-center">
                 <Button
                     asChild
