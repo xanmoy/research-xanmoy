@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-lg font-semibold text-white mb-4">CS Research</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Xanmoy</h3>
             <p className="max-w-md">
               Exploring the frontiers of computing, algorithms, and artificial intelligence through rigorous research
               and innovative applications.

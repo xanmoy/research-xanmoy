@@ -40,7 +40,7 @@ export function Header() {
         {/* Mobile Nav Toggle */}
         <div className="md:hidden flex items-center justify-between h-14 px-6">
           <Link href="/" className="text-primary font-semibold text-base">
-            CS Research
+            Xanmoy
           </Link>
           <Button
             variant="ghost"
