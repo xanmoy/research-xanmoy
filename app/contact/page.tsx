@@ -19,7 +19,7 @@ export default function ContactPage() {
   const [messages, setMessages] = useState<{ type: "bot" | "user"; content: string }[]>([
     {
       type: "bot",
-      content: "👋 Hi there! I'd love to help connect you with Mr. Ganguly. Let's start a conversation!",
+      content: "Hello there! I’m JARVIS, your friendly assistant. I'm here to help you connect with Mr. Ganguly. Let’s start a quick conversation to get things rolling!",
     },
   ])
 
@@ -110,7 +110,7 @@ export default function ContactPage() {
                   <MessageSquare className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <CardTitle className="text-white">XanBot</CardTitle>
+                  <CardTitle className="text-white">JARVIS</CardTitle>
                   <CardDescription className="text-neutral-400">Online • Typically replies instantly</CardDescription>
                 </div>
               </div>
