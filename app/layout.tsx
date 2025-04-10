@@ -7,13 +7,16 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import './globals.css'
 
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Computer Science Research",
+  title: "Tanmoy Ganguly | Computer Engineer & Researcher",
   description: "Exploring the frontiers of computing, algorithms, and artificial intelligence",
-  generator: 'xanmoy.dev'
+  generator: 'xanmoy'
 }
+
+
 
 export default function RootLayout({
   children,
