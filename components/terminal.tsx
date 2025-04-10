@@ -15,7 +15,7 @@ type CommandHistory = {
 export function Terminal() {
   const [input, setInput] = useState("")
   const [history, setHistory] = useState<CommandHistory[]>([
-    { command: "", output: "Welcome to the research terminal! Type 'help' to see available commands." },
+    { command: "", output: "Welcome to the XanShell! Type 'help' to see available commands." },
   ])
   const [historyIndex, setHistoryIndex] = useState(-1)
   const [typingIndex, setTypingIndex] = useState(-1)
@@ -206,7 +206,7 @@ export function Terminal() {
         </div>
         <div className="flex items-center text-xs text-neutral-400">
           <TerminalIcon className="h-3 w-3 mr-1.5" />
-          <span className="hidden sm:inline">researcher@terminal</span>
+          <span className="hidden sm:inline">guest@terminal</span>
           <span className="sm:hidden">terminal</span>
         </div>
         <div className="text-xs text-neutral-600 bg-neutral-800 px-1.5 py-0.5 rounded">xsh</div>
