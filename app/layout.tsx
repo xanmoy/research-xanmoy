@@ -6,14 +6,16 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import './globals.css'
+import Xsh from "@/components/xsh"
+import XanBot  from "@/components/xanBot"
 
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Tanmoy Ganguly | Computer Engineer & Researcher",
+  title: "Tanmoy Ganguly | Computer Engineer & System Researcher",
   description: "Exploring the frontiers of computing, algorithms, and artificial intelligence",
-  generator: 'xanmoy'
+  
 }
 
 
@@ -33,6 +35,8 @@ export default function RootLayout({
             <div className="flex-grow">{children}</div>
             <Footer />
           </div>
+          <Xsh />
+          <XanBot />
         </ThemeProvider>
       </body>
     </html>

@@ -43,9 +43,9 @@ export default function AboutPage() {
 
                   <div className="space-y-3">
                     <SocialLink
-                      href="mailto:xanmoy.tsx@gmail.com"
+                      href="mailto:tanmoy@xanmoy.in"
                       icon={<Mail className="h-5 w-5" />}
-                      label="xanmoy.tsx@gmail.com"
+                      label="tanmoy@xanmoy.in"
                     />
                     <SocialLink
                       href="https://github.com"
@@ -109,25 +109,25 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold mb-6 text-white">Education</h2>
               <div className="space-y-4">
                 <EducationCard
-                  degree="B.Tech in Computer Science"
+                  degree="Bachelor of Technology in Computer Science and Engineering"
                   institution="West Bengal University of Technology"
                   years="2021 - 2025"
-                  description="Focus on Artificial Intelligence and Algorithms"
+                  description="Focus on Artificial Intelligence, Algorithms, Cloud Computing and Distributed Systems."
                 />
                 
               </div>
             </section>
 
-            {/* <section>
+            <section>
               <h2 className="text-3xl font-bold mb-6 text-white">Experience</h2>
               <div className="space-y-4">
                 <ExperienceCard
-                  title="Lead Researcher"
-                  company="Advanced Computing Research Lab"
-                  years="2019 - Present"
-                  description="Leading a team of researchers exploring cutting-edge technologies in AI, distributed systems, and quantum computing."
+                  title="Cloud Computing Lead"
+                  company="Google Developer Groups"
+                  years="2024 - Present"
+                  description="Leading cloud computing initiatives, organizing workshops, and mentoring peers in cloud-native architecture and scalable ML systems."
                 />
-                <ExperienceCard
+                {/* <ExperienceCard
                   title="Senior Research Scientist"
                   company="Tech Research Institute"
                   years="2016 - 2019"
@@ -138,9 +138,9 @@ export default function AboutPage() {
                   company="Google Research"
                   years="Summer 2015"
                   description="Worked on machine learning optimization techniques for large-scale distributed systems."
-                />
+                /> */}
               </div>
-            </section> */}
+            </section>
 
             <section>
               <h2 className="text-3xl font-bold mb-6 text-white">

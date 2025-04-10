@@ -209,7 +209,7 @@ export function Terminal() {
           <span className="hidden sm:inline">researcher@terminal</span>
           <span className="sm:hidden">terminal</span>
         </div>
-        <div className="text-xs text-neutral-600 bg-neutral-800 px-1.5 py-0.5 rounded">bash</div>
+        <div className="text-xs text-neutral-600 bg-neutral-800 px-1.5 py-0.5 rounded">xsh</div>
       </div>
 
       <div

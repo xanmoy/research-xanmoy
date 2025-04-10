@@ -3,11 +3,15 @@ import { Terminal } from "@/components/terminal"
 export default function TerminalPage() {
   return (
     <main className="min-h-screen ">
-    {/* <main className="min-h-screen bg-gradient-to-b from-neutral-900 to-black"> */}
+      {/* <main className="min-h-screen bg-gradient-to-b from-neutral-900 to-black"> */}
       <div className="container py-12 px-4 md:py-16">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white text-center">Interactive Terminal</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white text-center">
+        
+          XanShell
+         
+          </h1>
         <p className="text-center mb-8 text-neutral-400 max-w-2xl mx-auto">
-          Explore my work and research using this interactive terminal. Try commands like{" "}
+          Explore my work and research using this XanShell. Try commands like{" "}
           <code className="bg-neutral-800 px-2 py-1 rounded text-xs md:text-sm">help</code>,{" "}
           <code className="bg-neutral-800 px-2 py-1 rounded text-xs md:text-sm">projects</code>, or{" "}
           <code className="bg-neutral-800 px-2 py-1 rounded text-xs md:text-sm">goto blog</code>
