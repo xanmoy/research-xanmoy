@@ -21,7 +21,7 @@ export function Header() {
 
   return (
     <header className="sticky top-6 z-50 w-full flex justify-center px-4">
-      <div className="max-w-3xl w-fit bg-card/80 backdrop-blur-md rounded-full border border-border shadow-lg transition-all">
+      <div className="max-w-3xl md:w-fit w-full bg-card/80 backdrop-blur-md rounded-full border border-border shadow-lg transition-all">
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center justify-center h-14 px-6 space-x-6">
