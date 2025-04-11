@@ -27,7 +27,7 @@ export function Terminal() {
   const isMobile = useMobile()
 
   const commands = {
-    help: "Available commands:\n\n• about - Learn about the Xanmoy\n• projects - View current research projects\n• blog - See recent blog posts\n• contact - Get contact information\n• clear - Clear the terminal\n• goto [page] - Navigate to a page\n• ls - List files\n• pwd - Print working directory\n• date - Show current date\n• whoami - Display user",
+    help: "Available commands:\n\n• about - Learn about the Xanmoy\n• projects - View current research projects\n• blog - See recent blog posts\n• contact - Get contact information\n• clear - Clear the terminal\n• goto [page] - Navigate to a page\n• ls - List files\n• pwd - Print working directory\n• date - Show current date\n• whoami - Display user \n• cd - Change directory\n• uname - Show system information\n• xanfetch - Display system information",
     about: "Computer Engineer specializing in algorithms, AI, and distributed systems.",
     projects:
       "Current research projects include: \n\n• Distributed AI Systems \n• Quantum Computing Algorithms \n• Machine Learning Optimization",
@@ -40,6 +40,11 @@ export function Terminal() {
     whoami: "guest",
     cd: "Changed directory.",
     goto: "Navigating to specified page...",
+    uname: "Linux",
+    xanfetch:
+      "OS: Xanix 9.04.2\nKernel: Linux 6.12.0-65-generic\nArchitecture: x86_64\nUptime: 2 days, 3 hours, 15 minutes\nPackages: 1200+(rpm)\nShell: xsh 5.0.0\nTerminal: xanShell 1.0\n CPU: Intel Xeon E5-2670 v3 @ 2.30GHz (16 cores)\nGPU: NVIDIA GeForce RTX 3080\nMemory: 32GB",
+
+
   }
 
   const handleCommand = (cmd: string) => {

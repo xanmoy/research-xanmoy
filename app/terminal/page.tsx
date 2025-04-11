@@ -43,6 +43,9 @@ export default function TerminalPage() {
               </li>
             </ul>
           </div>
+
+        
+          
         </div>
       </div>
     </main>

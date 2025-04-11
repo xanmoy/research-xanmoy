@@ -26,71 +26,78 @@ export default function ContactPage() {
   const [inputValue, setInputValue] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+
+
+  // remove this line:
+  // const [input, setInput] = useState("")
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    if (!inputValue.trim()) return
+    const trimmedInput = inputValue.trim()
+    if (!trimmedInput) return
 
-    // Add user message
-    setMessages((prev) => [...prev, { type: "user", content: inputValue }])
+    setMessages((prev) => [...prev, { type: "user", content: trimmedInput }])
+    setInputValue("")
 
-    // Process based on current step
     if (chatStep === "intro") {
       setTimeout(() => {
         setMessages((prev) => [
           ...prev,
-          {
-            type: "bot",
-            content: "Great! What's your name?",
-          },
+          { type: "bot", content: "Nice to meet you! What's your name?" },
         ])
         setChatStep("name")
       }, 500)
     } else if (chatStep === "name") {
-      setFormData((prev) => ({ ...prev, name: inputValue }))
+      setFormData({ ...formData, name: trimmedInput })
       setTimeout(() => {
         setMessages((prev) => [
           ...prev,
-          {
-            type: "bot",
-            content: `Nice to meet you, ${inputValue}! What's your email address so we can get back to you?`,
-          },
+          { type: "bot", content: "Thanks! What's your email address?" },
         ])
         setChatStep("email")
       }, 500)
     } else if (chatStep === "email") {
-      setFormData((prev) => ({ ...prev, email: inputValue }))
+      setFormData({ ...formData, email: trimmedInput })
       setTimeout(() => {
         setMessages((prev) => [
           ...prev,
-          {
-            type: "bot",
-            content:
-              "Perfect! Now, please tell me how I can help you or what you'd like to discuss with the Mr. Ganguly.",
-          },
+          { type: "bot", content: "Got it! What's your message?" },
         ])
         setChatStep("message")
       }, 500)
     } else if (chatStep === "message") {
-      setFormData((prev) => ({ ...prev, message: inputValue }))
+      const updatedFormData = { ...formData, message: trimmedInput }
+      setFormData(updatedFormData)
       setIsSubmitting(true)
 
-      // Simulate sending the message
+      try {
+        await fetch("/api/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedFormData),
+        })
+      } catch (error) {
+        console.error("Error sending email:", error)
+      }
+
       setTimeout(() => {
         setIsSubmitting(false)
         setMessages((prev) => [
           ...prev,
           {
             type: "bot",
-            content: `Thanks for reaching out! I've recorded your message and the researcher will get back to you at ${formData.email} as soon as possible.`,
+            content: `Thanks for reaching out! I've recorded your message and Mr. Ganguly will get back to you at ${updatedFormData.email} as soon as possible.`,
           },
         ])
         setChatStep("complete")
       }, 1500)
     }
-
-    setInputValue("")
   }
+
+
 
   return (
     <main className="min-h-screen bg-gradient-to-b">
@@ -154,7 +161,7 @@ export default function ContactPage() {
 
                 {chatStep !== "complete" && (
                   <div className="border-t border-neutral-800 p-4">
-                    <form onSubmit={handleSubmit} className="flex space-x-2">
+                    <form onSubmit={handleSubmit} className="flex items-center gap-2">
                       <Input
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
@@ -167,20 +174,21 @@ export default function ContactPage() {
                                 ? "Enter your email..."
                                 : "Type your message..."
                         }
-                        className="flex-1 bg-neutral-800 border-neutral-700 text-white"
+                        className="flex-1 bg-neutral-900 border border-neutral-700 text-white placeholder-neutral-400 focus:ring-2 focus:ring-indigo-500 focus:outline-none rounded-lg px-4 py-2"
                         disabled={isSubmitting}
                       />
                       <Button
                         type="submit"
                         size="icon"
-                        className="bg-indigo-600 hover:bg-indigo-700"
+                        className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg p-2 disabled:opacity-50 disabled:cursor-not-allowed"
                         disabled={isSubmitting || !inputValue.trim()}
                       >
-                        <Send className="h-4 w-4" />
+                        <Send className="h-5 w-5" />
                         <span className="sr-only">Send</span>
                       </Button>
                     </form>
                   </div>
+
                 )}
 
                 {chatStep === "complete" && (
