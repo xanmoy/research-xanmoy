@@ -2,6 +2,8 @@ import type React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import Education from "@/components/education";
+import Exprience from "@/components/exprience";
 
 export default function AboutPage() {
   return (
@@ -10,7 +12,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-1">
             <div className="sticky top-24">
-              <div className="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden">
+              <div className="bg-card border border-gray-800 rounded-lg overflow-hidden">
                 <div className="aspect-square overflow-hidden bg-gray-800">
                   <img
                     src="https://res.cloudinary.com/dg6vdv82c/image/upload/v1743506029/WhatsApp_Image_2025-03-22_at_14.55.44_wuv7h1.jpg"
@@ -105,40 +107,19 @@ export default function AboutPage() {
               </div>
             </section>
 
+           {/* Education  Section */}
             <section>
               <h2 className="text-3xl font-bold mb-6 text-white">Education</h2>
-              <div className="space-y-4">
-                <EducationCard
-                  degree="Bachelor of Technology in Computer Science and Engineering"
-                  institution="West Bengal University of Technology"
-                  years="2021 - 2025"
-                  description="Focus on Artificial Intelligence, Algorithms, Cloud Computing and Distributed Systems."
-                />
-                
+              <div className="space-y-">
+                <Education />
               </div>
             </section>
-
+          
+            {/* Experience Section */}
             <section>
               <h2 className="text-3xl font-bold mb-6 text-white">Experience</h2>
               <div className="space-y-4">
-                <ExperienceCard
-                  title="Cloud Computing Lead"
-                  company="Google Developer Groups"
-                  years="2024 - Present"
-                  description="Leading cloud computing initiatives, organizing workshops, and mentoring peers in cloud-native architecture and scalable ML systems."
-                />
-                {/* <ExperienceCard
-                  title="Senior Research Scientist"
-                  company="Tech Research Institute"
-                  years="2016 - 2019"
-                  description="Conducted research on distributed AI systems and published multiple papers in top-tier conferences."
-                />
-                <ExperienceCard
-                  title="Research Intern"
-                  company="Google Research"
-                  years="Summer 2015"
-                  description="Worked on machine learning optimization techniques for large-scale distributed systems."
-                /> */}
+                <Exprience />
               </div>
             </section>
 
@@ -271,7 +252,7 @@ function ExperienceCard({
 
 function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
   return (
-    <div className="bg-gray-900 border border-gray-800 rounded-lg p-6">
+    <div className="bg-card border border-gray-800 rounded-lg p-6">
       <h3 className="text-xl font-bold mb-4 text-white">{title}</h3>
       <div className="flex flex-wrap gap-2">
         {skills.map((skill) => (

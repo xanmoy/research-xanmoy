@@ -26,7 +26,7 @@ export function Hero() {
                 transition={{ delay: 0.3 }}
             >
                 <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight tracking-tight">
-                    Hi, I’m <span className="text-indigo-500">Xanmoy</span>
+                    Hi, I’m <span className="text-indigo-500">Tanmoy</span>
                 </h1>
                 <h2 className="text-xl md:text-3xl font-medium text-neutral-300 mb-6 max-w-5xl">
                     A computer engineer and systems researcher focused on intelligent systems, algorithms, and real-world problem solving.

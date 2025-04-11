@@ -20,24 +20,36 @@ export function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-6 z-50 w-full flex justify-center px-4">
-      <div className="max-w-3xl md:w-fit w-full bg-card/80 backdrop-blur-md rounded-full border border-border shadow-lg transition-all">
+    <header className=" top-10 pt-8 z-50 w-full flex justify-center px-4">
+      {/* sticky */}
+      <div className="max-w-3xl md:w-fit w-full bg-card/80 backdrop-blur-md rounded-full shadow-lg transition-all">
+        {/* border border-border */}
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center justify-center h-14 px-6 space-x-6">
+        <nav className="hidden md:flex items-center justify-center h-14 px-8 gap-6">
           {navItems.map((item) => (
             <Link
               key={item.path}
               href={item.path}
-              className={`text-sm font-medium transition-colors hover:text-primary ${pathname === item.path ? "text-primary" : "text-muted-foreground"
-                }`}
+              className={`
+        text-sm font-medium px-3 py-1.5 rounded-xl transition-colors duration-200
+        ${pathname === item.path
+                  ? "bg-primary/10 text-primary shadow-sm"
+                  : "text-muted-foreground hover:text-primary hover:bg-muted/30"}
+      `}
             >
               {item.name}
             </Link>
           ))}
         </nav>
 
+        
+
+
+
+
         {/* Mobile Nav Toggle */}
+        
         <div className="md:hidden flex items-center justify-between h-14 px-6">
           <Link href="/" className="text-primary font-semibold text-base">
             Xanmoy
@@ -56,13 +68,13 @@ export function Header() {
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="absolute top-24 left-4 right-4 md:hidden bg-card/90 backdrop-blur-md border border-border rounded-xl shadow-lg">
-          <nav className="py-6 px-6 flex flex-col space-y-4">
+        <div className="fixed inset-0 z-50 bg-card/90 backdrop-blur-md md:hidden flex items-center justify-center">
+          <nav className="flex flex-col items-center space-y-6">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${pathname === item.path ? "text-primary" : "text-muted-foreground"
+                className={`text-lg font-semibold transition-colors hover:text-primary ${pathname === item.path ? "text-primary" : "text-muted-foreground"
                   }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -72,6 +84,7 @@ export function Header() {
           </nav>
         </div>
       )}
+
     </header>
   )
 }

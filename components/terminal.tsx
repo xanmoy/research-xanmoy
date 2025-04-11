@@ -27,12 +27,12 @@ export function Terminal() {
   const isMobile = useMobile()
 
   const commands = {
-    help: "Available commands:\n\n• about - Learn about the researcher\n• projects - View current research projects\n• blog - See recent blog posts\n• contact - Get contact information\n• clear - Clear the terminal\n• goto [page] - Navigate to a page\n• ls - List files\n• pwd - Print working directory\n• date - Show current date\n• whoami - Display user",
+    help: "Available commands:\n\n• about - Learn about the Xanmoy\n• projects - View current research projects\n• blog - See recent blog posts\n• contact - Get contact information\n• clear - Clear the terminal\n• goto [page] - Navigate to a page\n• ls - List files\n• pwd - Print working directory\n• date - Show current date\n• whoami - Display user",
     about: "Computer Engineer specializing in algorithms, AI, and distributed systems.",
     projects:
       "Current research projects include: \n\n• Distributed AI Systems \n• Quantum Computing Algorithms \n• Machine Learning Optimization",
     blog: "Recent blog posts: \n\n• 'Optimizing Neural Networks for Edge Devices' \n• 'The Future of Quantum Computing' \n• 'Distributed Systems in Practice'",
-    contact: "Email: researcher@example.com \nTwitter: @csresearcher",
+    contact: "Email: tanmoy@xanmoy.in \nTwitter: @xanmoy",
     clear: "Clearing terminal...",
     ls: "about.txt  projects.md  blog/  contact.json  research.pdf",
     pwd: "/home/guest",
