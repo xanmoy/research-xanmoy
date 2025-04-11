@@ -32,17 +32,21 @@ export function Header() {
               key={item.path}
               href={item.path}
               className={`
-        text-sm font-medium px-3 py-1.5 rounded-xl transition-colors duration-200
+        flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-xl transition-colors duration-200
         ${pathname === item.path
                   ? "bg-primary/10 text-primary shadow-sm"
                   : "text-muted-foreground hover:text-primary hover:bg-muted/30"}
       `}
             >
               {item.name}
+              {item.name === "Work" && (
+                <kbd className="ml-1 bg-muted/20 px-1.5 py-0.5 text-xs rounded-md border border-muted-foreground/20 font-mono">
+                  /
+                </kbd>
+              )}
             </Link>
           ))}
         </nav>
-
         
 
 

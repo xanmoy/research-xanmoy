@@ -106,7 +106,7 @@ function BlogPostCard({ post }: { post: (typeof blogPosts)[0] }) {
         <CardDescription className="text-neutral-400">{post.excerpt}</CardDescription>
       </CardContent>
       <CardFooter>
-        <Button variant="ghost" className="text-indigo-400 hover:text-indigo-300 p-0" asChild>
+        <Button className="text-indigo-400 bg-transparent hover:bg-indigo-600/30 hover:text-indigo-300 p-3" asChild>
           <Link href={`/blog/${post.slug}`}>
             <span>Read More</span>
             <ArrowRight className="ml-2 h-4 w-4" />
