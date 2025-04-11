@@ -9,7 +9,7 @@ export async function POST(req: Request) {
         const data = await resend.emails.send({
             from: 'JARVIS Assistant <onboarding@resend.dev>',
             to: ['xanmoy.tsx@gmail.com'],
-            subject: `New message from ${name}`,
+            subject: `Sir, You have a New message from ${name}`,
             html: `<p><strong>Name:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>
              <p><strong>Message:</strong> ${message}</p>`,
