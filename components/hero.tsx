@@ -25,16 +25,22 @@ export function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
             >
-                <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight tracking-tight">
+                <motion.h1
+                    className="text-5xl md:text-5xl lg:text-7xl font-bold mb-4 leading-tight tracking-tight"
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    style={{ fontFamily: 'Brandon Grotesque, sans-serif' }}
+                >
                     Hi, I’m <span className="text-indigo-500">Tanmoy</span>
-                </h1>
+                </motion.h1>
                 <h2 className="text-xl md:text-3xl font-medium text-neutral-300 mb-6 max-w-5xl">
-                    A computer engineer and systems researcher focused on intelligent systems, algorithms, and real-world problem solving.
+                    A Software Engineer. Focused on intelligent systems, algorithms, and real-world problem solving.
                 </h2>
                 <p className="text-base md:text-xl text-neutral-400 max-w-6xl md:max-w-6xl lg:max-w-5xl xl:max-w-4xl mb-10">
                     Passionate about pushing the boundaries of technology through research in artificial intelligence, software architecture, and computational theory.
                 </p>
             </motion.div>
+
 
             <motion.div
                 className="flex flex-wrap gap-4 justify-center"

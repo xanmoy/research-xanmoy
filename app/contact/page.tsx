@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Mail, MessageSquare, Send } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function ContactPage() {
   const [chatStep, setChatStep] = useState<"intro" | "name" | "email" | "message" | "complete">("intro")
@@ -103,7 +104,15 @@ export default function ContactPage() {
     <main className="min-h-screen bg-gradient-to-b">
       <div className="container py-16 px-4">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-4xl font-bold mb-2 text-white text-center">Get in Touch</h1>
+          {/* <h1 className="text-4xl font-bold mb-2 text-white text-center">Get in Touch</h1> */}
+          <motion.h1
+            className="text-5xl md:text-5xl lg:text-7xl font-bold mb-4 text-center leading-tight tracking-tight"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            style={{ fontFamily: 'Brandon Grotesque, sans-serif' }}
+          >
+            Get in Touch
+          </motion.h1>
           <p className="text-xl text-neutral-400 mb-12 text-center">
             Have a question or want to collaborate?{" "}
             <span>Chat with my assistant below.</span>

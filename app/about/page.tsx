@@ -1,9 +1,11 @@
+"use client";
 import type React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Education from "@/components/education";
 import Exprience from "@/components/exprience";
+import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
@@ -72,7 +74,14 @@ export default function AboutPage() {
 
           <div className="lg:col-span-2 space-y-12">
             <section>
-              <h2 className="text-3xl font-bold mb-6 text-white">About Me</h2>
+              <motion.h1
+                className="text-5xl md:text-5xl lg:text-7xl font-bold mb-4 leading-tight tracking-tight"
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                style={{ fontFamily: 'Brandon Grotesque, sans-serif' }}
+              >
+                About Me
+              </motion.h1>
               <div className="prose prose-invert max-w-none">
                 <p>
                   {" "}

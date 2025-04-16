@@ -1,16 +1,26 @@
+"use client"
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Calendar, Clock } from "lucide-react"
 import { blogPosts } from "@/lib/data/blog-data"
+import { motion } from "framer-motion"
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-neutral-950 pt-24">
+    <main className="min-h-screen bg-neutral-950 pt-2">
       <div className="container py-12 px-4 md:py-16 max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Blog & Publications</h1>
+          <motion.h1
+            className="text-5xl md:text-5xl lg:text-7xl font-bold mb-4 text-center leading-tight tracking-tight"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            style={{ fontFamily: 'Brandon Grotesque, sans-serif' }}
+          >
+            Blog & Publications
+          </motion.h1>
+          {/* <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Blog & Publications</h1> */}
           <p className="text-neutral-400 max-w-2xl mx-auto text-lg leading-relaxed">
             Sharing insights, research findings, and technical tutorials on computer science topics.
           </p>
@@ -24,9 +34,13 @@ export default function BlogPage() {
 
         <h2 className="text-3xl font-bold mt-20 mb-8 text-white">Academic Publications</h2>
         <div className="space-y-6">
-          {publications.map((publication) => (
+          {/* {publications.map((publication) => (
             <PublicationCard key={publication.id} publication={publication} />
-          ))}
+          ))} */}
+          <p className="text-neutral-400 text-center">
+            The publications section is currently under construction. Please check back later for updates.
+          </p>
+          
         </div>
       </div>
     </main>

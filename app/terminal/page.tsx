@@ -1,15 +1,20 @@
+"use client"
 import { Terminal } from "@/components/terminal"
+import { motion } from "framer-motion"
 
 export default function TerminalPage() {
   return (
     <main className="min-h-screen ">
       {/* <main className="min-h-screen bg-gradient-to-b from-neutral-900 to-black"> */}
       <div className="container py-12 px-4 md:py-16">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white text-center">
-        
+        <motion.h1
+          className="text-5xl md:text-5xl lg:text-7xl font-bold mb-4 text-center leading-tight tracking-tight"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          style={{ fontFamily: 'Brandon Grotesque, sans-serif' }}
+        >
           XanShell
-         
-          </h1>
+        </motion.h1>
         <p className="text-center mb-8 text-neutral-400 max-w-2xl mx-auto">
           Explore my work and research using this XanShell. Try commands like{" "}
           <code className="bg-neutral-800 px-2 py-1 rounded text-xs md:text-sm">help</code>,{" "}

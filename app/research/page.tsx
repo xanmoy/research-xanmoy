@@ -1,22 +1,34 @@
+"use client"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 import { researchProjects } from "@/lib/data/research-data"
+import { motion } from "framer-motion"
 
 export default function ResearchPage() {
   return (
-    <main className="min-h-screen bg-neutral-950 pt-24">
+    <main className="min-h-screen bg-neutral-950 pt-2">
       <div className="container pb-12 px-4 md:py-16 max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Research Projects</h1>
+          {/* <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Research Projects</h1> */}
+          
+          <motion.h1
+            className="text-5xl md:text-5xl lg:text-7xl font-bold mb-4 text-center leading-tight tracking-tight"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            style={{ fontFamily: 'Brandon Grotesque, sans-serif' }}
+          >
+            Research Projects
+          </motion.h1>
           <p className="text-neutral-400 max-w-2xl mx-auto text-lg leading-relaxed">
             Exploring the frontiers of computer science through innovative research and practical applications.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> */}
+        <div className="flex flex-col items-center justify-center space-y-6">
           {/* {researchProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))} */}
