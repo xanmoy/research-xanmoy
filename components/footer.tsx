@@ -42,6 +42,11 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/sitemap-0.xml" className="hover:text-indigo-500 transition-colors">
+                  SiteMap
+                </Link>
+              </li>
             </ul>
           </div>
 
