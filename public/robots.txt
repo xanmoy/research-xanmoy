@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://xanmoy.in
+
+# Sitemaps
+Sitemap: https://xanmoy.in/sitemap.xml

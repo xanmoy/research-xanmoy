@@ -1,3 +1,6 @@
+import { withSitemap } from 'next-sitemap';
+
+// Your custom configuration
 let userConfig = undefined
 try {
   // try to import ESM first
@@ -29,8 +32,8 @@ const nextConfig = {
   },
 }
 
+// Merge user config with default config
 if (userConfig) {
-  // ESM imports will have a "default" property
   const config = userConfig.default || userConfig
 
   for (const key in config) {
@@ -48,4 +51,9 @@ if (userConfig) {
   }
 }
 
-export default nextConfig
+// Wrap the nextConfig with next-sitemap's withSitemap function
+export default withSitemap({
+  siteUrl: 'https://research.xanmoy.in', // Your website URL
+  generateRobotsTxt: true, // Optionally generate robots.txt
+  ...nextConfig, // Spread the default and user-config merged configuration here
+});

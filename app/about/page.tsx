@@ -26,14 +26,17 @@ export default function AboutPage() {
                   <h1 className="text-2xl font-bold text-white mb-2">
                     Tanmoy Ganguly
                   </h1>
-                  <p className="text-indigo-500 mb-4">System Researcher</p>
+                  <p className="text-indigo-500 mb-4">
+                    Software Engineer 
+                  </p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
                     {[
                       "AI",
                       "Machine Learning",
-                      "Distributed Systems",
-                      "Quantum Computing",
+                      "Microservices",
+                      "Full Stack Development",
+                      "Cloud Computing",
                     ].map((skill) => (
                       <Badge
                         key={skill}
@@ -47,9 +50,9 @@ export default function AboutPage() {
 
                   <div className="space-y-3">
                     <SocialLink
-                      href="mailto:tanmoy@xanmoy.in"
+                      href="mailto:xanmoy.tsx@gmail.com"
                       icon={<Mail className="h-5 w-5" />}
-                      label="tanmoy@xanmoy.in"
+                      label="xanmoy.tsx@gmail.com"
                     />
                     <SocialLink
                       href="https://github.com"
@@ -158,12 +161,21 @@ export default function AboutPage() {
                   ]}
                 />
                 <SkillCategory
-                  title="Quantum Computing"
+                  title="Full Stack Development"
                   skills={[
-                    "Quantum Algorithms",
-                    "Quantum Machine Learning",
-                    "Quantum Simulation",
-                    "Quantum Optimization",
+                    "React.js",
+                    "Next.js",
+                    "Angular",
+                    "Electron",
+                    "React Native",
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "PostgreSQL",
+                    "GraphQL",
+                    "REST APIs",
+                    "Microservices",
+                    "Go"
                   ]}
                 />
                 <SkillCategory
