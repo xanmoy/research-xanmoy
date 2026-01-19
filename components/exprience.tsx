@@ -4,23 +4,25 @@ import { GraduationCap, School, Building2 } from "lucide-react";
 
 const ExprienceData = [
     {
+        title: "PricewaterhouseCoopers (PWC AC India) - Associate",
+        location: "Kolkata, India",
+        description:
+            "I am a DAT Associate at PwC, currently focused on leveraging data-driven insights and technology solutions to address complex business challenges.",
+        year: "2025 - present",
+        icon: <Building2 size={20} />,
+        side: "left",
+    },
+    
+    {
         title: "Cloud Lead at Google Developer Groups (GDG)",
         location: "Kolkata, India",
         description:
             "I lead cloud computing initiatives, mentor students, and organize workshops to foster learning and innovation in cloud technologies.",
-        year: "2024 - present",
-        icon: <School size={20} />,
+        year: "2024 - 2025",
+        icon: <Building2 size={20} />,
         side: "left",
     },
-    {
-        title: "Co-founder of Zeno",
-        location: "Kolkata, India",
-        description:
-            "Zeno is a startup focused on developing innovative solutions in the field of technology and Exprience.",
-        year: "2025 - present",
-        icon: <Building2 size={20} />,
-        side: "right",
-    },
+    
 
 ];
 

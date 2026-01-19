@@ -6,6 +6,7 @@ import { Hero } from "@/components/hero"
 import { Work } from "@/components/work"
 import { Terminal } from "@/components/terminal" // your Terminal component path
 import { OpenSourceProjects } from "@/components/projects"
+import ExprienceTimeline from "@/components/exprience"
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
+      <ExprienceTimeline/>
       {/* Work Section */}
       <Work />
       
